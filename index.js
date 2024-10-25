@@ -8,7 +8,7 @@ let main = document.querySelector("body main")
 let titulo = document.querySelector("body main span")
 let logo = document.querySelector("body header .logo span")
 let idioma = document.querySelector("body header .iconos-boton .fa-globe")
-const nav = document.querySelectorAll("body header nav ul li a")
+let nav = document.querySelectorAll("body header nav ul li a")
 let ul = document.querySelector("body header nav ul")
 let li = document.querySelector("body header nav ul li")
 let carrito = document.querySelector("body header .iconos-boton .carrito .fa-cart-plus")
@@ -70,11 +70,16 @@ boton_oscuro.addEventListener("click",(event)=>{
     }else{
         logo.style.color="black";
     }
+    
     for (let i = 0; i < nav.length; i++){
-        nav[i].style.color = "white"
+        if (nav[i].style.color=="black"){
+            nav[i].style.color="white";
+        }else{
+            nav[i].style.color="black";
+        }
     }
     for (let i = 0; i < carrito.length; i++){
-        nav[i].style.border = " 1px  solid white";
+        carrito[i].style.border= "10px solid white";
     }
    
     if (ul.style.color=="black"){

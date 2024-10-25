@@ -22,8 +22,9 @@ body header {
     /* height: 8%; */
     /* background-color: aqua; */
     height: 8%;
-    transition: all 1s;
+    transition: all 0.5s;
     overflow: hidden;
+   
 }
 body  .fa-bars{
     display: none;
