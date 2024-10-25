@@ -124,18 +124,34 @@ body main  span{
     /* height: 12%; */
     /* height: 20%; */
 }
-body main .imagen{
+body main .imagenes{
+    overflow: hidden;
+    display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
     /* height: 50%; */
     height: 80%;
-    /* flex-grow: 1; */
+    flex-grow: 1;
 }
-body main .imagen img{
+body main .imagenes .imagen1{
+    /* display: flex; */
     width: 100%;
     height: 95%;
-    object-fit: cover;
+    object-fit: contain;
+
+}
+body main .imagenes .imagen2{
+    width: 100%;
+    height: 95%;
+    display: flex;
+}
+body main .imagenes .imagen1 img{
+    width: 100%;
     
+}
+body main .imagenes .imagen2 img{
+    /* width: 200%; */
+
 }
 @media (max-width:1000px) and (min-width:100px){
     body header {
