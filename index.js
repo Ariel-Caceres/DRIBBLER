@@ -2,12 +2,13 @@ let header = document.querySelector("body header");
 let burguer = document.querySelector("body .burguer .fa-bars");
 let x = document.querySelector("body header .fa-x");
 let slider = document.querySelector("body main .imagenes");
-let boton_oscuro = document.querySelector("body main .modo-oscuro ");
+let boton_oscuro = document.querySelector("body main .modo-oscuro button");
 let body = document.querySelector("body");
+let main = document.querySelector("body main")
 let titulo = document.querySelector("body main span")
 let logo = document.querySelector("body header .logo span")
 let idioma = document.querySelector("body header .iconos-boton .fa-globe")
-let nav = document.querySelector("body header nav ul li a")
+const nav = document.querySelectorAll("body header nav ul li a")
 let ul = document.querySelector("body header nav ul")
 let li = document.querySelector("body header nav ul li")
 let carrito = document.querySelector("body header .iconos-boton .carrito .fa-cart-plus")
@@ -28,6 +29,32 @@ boton_oscuro.addEventListener("click",(event)=>{
     }else{
         body.style.backgroundColor="white";
     }
+    if (main.style.backgroundColor=="white"){
+        main.style.backgroundColor="black";
+    }else{
+        main.style.backgroundColor="white";
+    }
+    if (header.style.backgroundColor=="white"){
+        header.style.backgroundColor="black";
+    }else{
+        header.style.backgroundColor="white";
+    }
+    if (x.style.color=="black"){
+        x.style.color="white";
+    }else{
+        x.style.color="black";
+    }
+    if (boton_oscuro.style.backgroundColor=="black"){
+        boton_oscuro.style.backgroundColor="white";
+    }else{
+        boton_oscuro.style.backgroundColor="black";
+    }
+    if (boton_oscuro.style.color=="white"){
+        boton_oscuro.style.color="black";
+    }else{
+        boton_oscuro.style.color="white";
+    }
+
     if (titulo.style.backgroundColor=="white"){
         titulo.style.backgroundColor="black";
     }else{
@@ -43,21 +70,20 @@ boton_oscuro.addEventListener("click",(event)=>{
     }else{
         logo.style.color="black";
     }
-    if (nav.style.color=="black"){
-        nav.style.color="white";
-    }else{
-        nav.style.color="black";
+    for (let i = 0; i < nav.length; i++){
+        nav[i].style.color = "white"
     }
+    for (let i = 0; i < carrito.length; i++){
+        nav[i].style.border = " 1px  solid white";
+    }
+   
     if (ul.style.color=="black"){
         ul.style.color="white";
     }else{
         ul.style.color="black";
-    }
-    if (li.style.color=="black"){
-        li.style.color="white";
-    }else{
-        li.style.color="black";
-    }
+    }   
+    
+    
     if (idioma.style.color=="black"){
         idioma.style.color="white";
     }else{
@@ -75,11 +101,16 @@ boton_oscuro.addEventListener("click",(event)=>{
     }else{
         boton_cart.style.backgroundColor="black";
     }
+    
     if (boton_cart.style.color =="white"){
         boton_cart.style.color = "black";
     }else{
         boton_cart.style.color = "white";
     }
-  
+    if (burguer.style.color=="black"){
+        burguer.style.color="white";
+    }else{
+        burguer.style.color="black";
+    }   
 
 })
