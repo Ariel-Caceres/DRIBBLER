@@ -22,7 +22,6 @@ body header {
     /* height: 8%; */
     /* background-color: aqua; */
     height: 8%;
-    transition: all 0.5s;
     overflow: hidden;
    
 }
@@ -119,7 +118,6 @@ body main{
     /* box-sizing: content-box; */
     height: 92%;
     background-color: white;
-  
 }
 @keyframes move{
     from {top:0px;}
@@ -160,27 +158,25 @@ body main  span{
    
 }
 body main  .imagenes{
+    overflow: hidden;
     width: 100%;
     height: 80%;
-    display: flex;
 }
 
-body main  .imagenes  img{
+body main  .imagenes  .imagen1{
+    display: flex;
     object-fit: cover;
     width: 100%;
     
 }
-/* body main  .imagen2{
-    width: 100%;
-    height: 80%;
-    display: flex;
-} */
 
-/* body main  .imagen2  img{
+body main  .imagenes  .imagen2{
     object-fit: cover;
     width: 100%;
+    display: none;
+    left: -100%;
     
-} */
+}
 
 
 
@@ -198,6 +194,8 @@ body main  .imagenes  img{
         top: 0;
         z-index: 1;
         justify-content: space-evenly;
+        transition: all 0.5s;
+
     }
     body header nav ul{
         flex-direction: column;
@@ -247,6 +245,7 @@ body main  .imagenes  img{
     body header .logo .fa-x:hover{
         cursor: pointer;
     }
+  
 }
 @media (max-width:1669px) and (min-width:1500px){
     body main span{
