@@ -13,8 +13,8 @@ let ul = document.querySelector("body header nav ul")
 let li = document.querySelector("body header nav ul li")
 let carrito = document.querySelector("body header .iconos-boton .carrito .fa-cart-plus")
 let boton_cart = document.querySelector("body header .iconos-boton .carrito button")
-let imagen2 = document.querySelector("body main .imagenes .imagen2")
-let imagen1 = document.querySelector("body main .imagenes .imagen1")
+let imagen1 = document.querySelector("body main  .imagen1")
+let imagen2 = document.querySelector("body main  .imagen2")
 burguer.addEventListener("click", () => {
     console.log("locura total")
     header.style.left = "0%";
@@ -28,19 +28,12 @@ boton_oscuro.addEventListener("click", (event) => {
 
     if (imagen1.style.display == "inline") {
         imagen1.style.display = "none";
-    } else {
-        imagen1.style.display = "inline";
-        imagen2.style.left = "-100%";
-    }
-    if (imagen2.style.left == "-100%") {
-        imagen2.style.left = "0%";
         imagen2.style.display = "inline";
-
-    } else {
-        imagen2.style.left = "-100%";
+    }else{
         imagen1.style.display = "inline";
+        imagen2.style.display = "none";
     }
-
+    
 
     if (body.style.backgroundColor == "white") {
         body.style.backgroundColor = "black";
@@ -138,7 +131,15 @@ boton_oscuro.addEventListener("click", (event) => {
 
 }
 )
-   
+if (imagen1.style.display == "inline") {
+    imagen1.style.display = "none";
+    imagen2.style.display = "inline";
+}else{
+    imagen1.style.display = "inline";
+    imagen2.style.display = "none";
+}
+
+
 if (body.style.backgroundColor == "white") {
     body.style.backgroundColor = "black";
 } else {

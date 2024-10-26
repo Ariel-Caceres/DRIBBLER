@@ -157,28 +157,32 @@ body main  span{
     text-align: center;
    
 }
-body main  .imagenes{
-    overflow: hidden;
+body main  .imagenes {
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 80%;
 }
-
 body main  .imagenes  .imagen1{
     display: flex;
-    object-fit: cover;
     width: 100%;
-    
+
+}
+body main  .imagenes  .imagen1 img{
+    object-fit: cover;
+    display: inline;
+    width: 100%;
 }
 
 body main  .imagenes  .imagen2{
-    object-fit: cover;
-    width: 100%;
     display: none;
-    left: -100%;
-    
+    width: 100%;
+    /* left: -100%; */
 }
-
-
+body main  .imagenes  .imagen2 img{
+    object-fit: cover;
+    display: none;
+}
 
 @media (max-width:1000px) and (min-width:100px){
     body header {
